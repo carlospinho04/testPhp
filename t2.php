@@ -1,11 +1,14 @@
 <?php
+
 // $Id$
+
 // Try to remove anti-SPAM bits
 function antiSpam($email)
 {
     $remove_spam = "![-_]?(NO|I[-_]?HATE|DELETE|REMOVE)[-_]?(THIS)?(ME|SPAM)?[-_]?!i";
     return preg_replace($remove_spam, "", trim($email));
 }
+
 class Foo { 
     public $aMemberVar = 'aMemberVar Member Variable'; 
     public $aFuncName = 'aMemberFunc'; 
@@ -15,6 +18,7 @@ class Foo {
         print 'Inside `aMemberFunc()`'; 
     } 
 } 
+
 namespace MyBarPackage\MyBarInnerPackage {
 	class Bar { 
 	    public $aMemberVar = 'aMemberVar Member Variable'; 
@@ -26,6 +30,7 @@ namespace MyBarPackage\MyBarInnerPackage {
 	    } 
 	}
 }
+
 namespace MyFunctions{
 	// Try to remove anti-SPAM bits
 	function clean($email) {
@@ -33,4 +38,5 @@ namespace MyFunctions{
 	    return preg_replace($remove_spam, "", trim($email));
 	}
 }
+
 ?>
